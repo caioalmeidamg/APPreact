@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "./Header";
 import { useParams, Link } from "react-router-dom";
 
@@ -10,10 +10,22 @@ const Seguinte = () => {
     if(parametros.cor === undefined){
         parametros.cor = "green"
     }
+
+    const [nome, alteraNome] = useState("Botão Legal");
+
+    const handleInputChange = (event) => {
+        alteraNome(event.target.value);
+    };
     return (
         <div style={{textAlign: "center"}}>
-            <Header headerColor= {parametros.cor} headerHeight="20vh"/>
-            <Link to="/" className="homeButton" >Botão legal</Link>
+
+            <Link to="/" className="homeButton" >{nome}</Link>
+            <input 
+                type="text"
+                onChange={handleInputChange} 
+                placeholder="Digite seu nome"
+                style={{marginLeft: "3%"}}
+            />
         </div>
     );   
         

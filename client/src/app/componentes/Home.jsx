@@ -11,7 +11,6 @@ const Home = () => {
 
         return (
             <div style={{textAlign: "center"}}>
-                <Header headerColor= {parametros.cor} headerHeight="20vh"/>
                 <Link to="/Seguinte" className="homeButton" >Botão legal</Link>
             </div>
         );
