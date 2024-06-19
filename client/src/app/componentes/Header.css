@@ -1,0 +1,8 @@
+.cabecalho {
+    display: flex;
+    background-color: grey;
+    justify-content: space-between;
+    border-radius: 10px;
+    margin: 0%;
+    
+}

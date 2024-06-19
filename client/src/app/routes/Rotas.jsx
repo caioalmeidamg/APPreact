@@ -24,6 +24,10 @@ const Rotas = () => {
         {
             path: "/seguinte",
             element: <Seguinte />
+        },
+        {
+            path: "/seguinte/:cor",
+            element: <Seguinte />
         }
     ])
     return (<RouterProvider router={rotas}/>)
